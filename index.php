@@ -23,7 +23,7 @@
 
         <!-- Formulario de inicio de sesión -->
         <div id="loginForm" class="ml-auto">
-            <form action="login.php" method="post" class="form-inline">
+            <form action="ADMIN/login.php" method="post" class="form-inline">
                 <input type="text" class="form-control mr-2" name="username" placeholder="Usuario" required>
                 <input type="password" class="form-control mr-2" name="password" placeholder="Contraseña" required>
                 <button type="submit" class="btn btn-primary">Ingresar</button>
