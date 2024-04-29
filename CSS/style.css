@@ -1,0 +1,45 @@
+/* style.css */
+
+#loginForm {
+    margin-left: auto;
+}
+
+#loginForm form {
+    display: flex;
+    align-items: center;
+}
+.search-container {
+    margin-top: 200px; /* Ajusta el margen superior del contenedor del buscador */
+}
+.search-bar {
+    margin-top: 20px;/* Ajusta el margen superior del contenedor */
+
+}
+
+#searchResults {
+    margin-top: 20px; /* Ajusta el margen superior de los resultados */
+}
+
+/* Estilos para el logo y la imagen */
+.logo-img {
+    max-width: 100px; /* Ajusta el tamaño máximo del logo */
+    height: auto;
+    margin-right: 10px; /* Espacio entre el logo y la imagen */
+}
+
+.header-img {
+    max-width: 100px; /* Ajusta el tamaño máximo de la imagen del encabezado */
+    height: auto;
+    margin-right: 10px; /* Espacio entre el logo y la imagen */
+}
+
+.title {
+    flex-grow: 1; /* Asegura que el título ocupe el espacio disponible */
+}
+
+.title h1 {
+    color: white; /* Cambia el color del texto a blanco */
+}
+
+
+
