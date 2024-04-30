@@ -41,6 +41,9 @@
             </form>
         </div>
         <div id="searchResults" class="mt-4">
+            <?php
+            include_once ("POKEMON/vista.php");
+            ?>
             <!-- Aquí se mostrarán los resultados de la búsqueda -->
         </div>
     </div>
