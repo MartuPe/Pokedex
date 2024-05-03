@@ -19,8 +19,9 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
     echo "Error";
     exit();
 }
-function consultarBD($usuario, $password)
+function cconsultarBD($usuario, $password)
 {
+    global $conn;
     include_once ("../POKEMON/conexionBDD.php");
 
     //Consulta

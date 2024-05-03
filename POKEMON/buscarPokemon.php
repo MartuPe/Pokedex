@@ -1,4 +1,5 @@
 <?php
+global $conn;
 include_once("conexionBDD.php");
 include_once("../headerUsuarioAdmin.php");
 
@@ -23,7 +24,7 @@ if (isset($_POST["buscar"])) {
         echo "</tr>";
         while ($fila = mysqli_fetch_assoc($resultado)) {
             echo "<tr style='background-color: #fff;'>";
-            echo "<td style='border: 1px solid #ddd; padding: 8px;'><img src='" . $fila["imagenPokemon"] . "' width='100' height='100'></td>";
+            echo "<td style='border: 1px solid #ddd; padding: 8px;'><a href='../POKEMON/descripcionPokemon.php?id=" . $fila['Id'] . "'><img src='" . $fila["imagenPokemon"] . "' width='100' height='100'></a></td>";
             echo "<td style='border: 1px solid #ddd; padding: 8px;'><img src='" . $fila["imagenTipo"] . "' width='100' height='100'></td>";
             echo "<td style='border: 1px solid #ddd; padding: 8px;'>" . $fila["numero"] . "</td>";
             echo "<td style='border: 1px solid #ddd; padding: 8px;'>" . $fila["nombre"] . "</td>";
@@ -53,7 +54,7 @@ if (!$pokemonEncontrado) {
         echo "</tr>";
         while ($fila_todos = mysqli_fetch_assoc($resultado_todos)) {
             echo "<tr style='background-color: #fff;'>";
-            echo "<td style='border: 1px solid #ddd; padding: 8px;'><img src='" . $fila_todos["imagenPokemon"] . "' width='100' height='100'></td>";
+            echo "<td style='border: 1px solid #ddd; padding: 8px;'><a href='../POKEMON/descripcionPokemon.php?id=" . $fila_todos['Id'] . "'><img src='" . $fila_todos["imagenPokemon"] . "' width='100' height='100'></a></td>";
             echo "<td style='border: 1px solid #ddd; padding: 8px;'><img src='" . $fila_todos["imagenTipo"] . "' width='100' height='100'></td>";
             echo "<td style='border: 1px solid #ddd; padding: 8px;'>" . $fila_todos["numero"] . "</td>";
             echo "<td style='border: 1px solid #ddd; padding: 8px;'>" . $fila_todos["nombre"] . "</td>";
@@ -61,9 +62,7 @@ if (!$pokemonEncontrado) {
             echo "</tr>";
         }
         echo "</table>";
-    } else {
-        // Mostrar mensaje de "No hay Pokémon en la base de datos"
-        echo "<div class='alert alert-warning mt-3' role='alert'>No hay Pokémon en la base de datos.</div>";
     }
 }
 ?>
+

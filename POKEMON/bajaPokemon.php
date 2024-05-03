@@ -1,4 +1,5 @@
 <?php
+global $conn;
 include_once("conexionBDD.php");
 
 if (isset($_GET["id"])) {
