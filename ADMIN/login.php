@@ -2,6 +2,11 @@
 session_start();
 
 
+function consultarBD($usuario, $password)
+{
+
+}
+
 if (isset($_POST["username"]) && isset($_POST["password"])) {
     $usuario = $_POST["username"];
     $password = $_POST["password"];
