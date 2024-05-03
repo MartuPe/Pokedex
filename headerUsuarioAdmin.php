@@ -42,7 +42,6 @@
     <!-- Contenido principal aquí -->
 </div>
 
-<!-- Tu otro código aquí -->
 
 </body>
 </html>
