@@ -2,6 +2,11 @@
 session_start();
 
 
+function consultarBD($usuario, $password)
+{
+
+}
+
 if (isset($_POST["username"]) && isset($_POST["password"])) {
     $usuario = $_POST["username"];
     $password = $_POST["password"];
@@ -19,20 +24,10 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
     echo "Error";
     exit();
 }
-function consultarBD($usuario, $password)
+function cconsultarBD($usuario, $password)
 {
-    $servername = "localhost";
-    $username = "root";
-    $pass = "";
-    $database = "pokedex";
-
-    $conn = mysqli_connect(
-        $servername, $username, $pass, $database
-    );
-
-    if(!$conn){
-        die("Error al conectar con la base de datos: " . mysqli_connect_error());
-    }
+    global $conn;
+    include_once ("../POKEMON/conexionBDD.php");
 
     //Consulta
     $sql = "SELECT * FROM `login` WHERE nombreUsuario = '$usuario' AND passUsuario = '$password'";
@@ -43,5 +38,12 @@ function consultarBD($usuario, $password)
     Si devuelve 1, significa que se encontró una coincidencia y la función devuelve true.
     Si devuelve 0 o más de 1, significa que no se encontró ninguna coincidencia o se
     encontraron múltiples coincidencias, respectivamente, y la función devuelve false*/
+
+}
+
+function devolverNombre(){
+
+}
+{
 
 }

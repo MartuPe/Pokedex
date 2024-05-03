@@ -34,10 +34,9 @@
 <div class="container mt-5">
     <div class="search-container">
         <div class="search-bar">
-            <form class="form-inline">
-
-                <input type="text" class="form-control flex-grow-1 mr-2" id="searchInput" placeholder="Ingrese nombre, tipo o número de Pokémon">
-                <button class="btn btn-primary" onclick="buscarPokemon()">Quién es este pokemon?</button>
+            <form class="form-inline" method="post" action="POKEMON/buscarPokemon.php">
+                <input type="text" class="form-control flex-grow-1 mr-2" name="searchInput" placeholder="Ingrese nombre, tipo o número de Pokémon">
+                <button type="submit" class="btn btn-primary" name="buscar">Buscar</button>
             </form>
         </div>
         <div id="searchResults" class="mt-4">
