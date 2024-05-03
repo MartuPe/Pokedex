@@ -1,5 +1,6 @@
 <?php
 
+global $conn;
 include_once("conexionBDD.php");
 
 $sql = "SELECT * FROM apipokemon";
@@ -41,6 +42,7 @@ if (mysqli_num_rows($resultado) > 0) {
         echo "</tr>";
     }
     echo "</table>";
+
 } else {
     echo "No se encontraron resultados.";
 }
