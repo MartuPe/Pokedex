@@ -1,4 +1,5 @@
 <?php
+global $conn;
 include_once("conexionBDD.php");
 
 if (isset($_GET["id"]) && isset($_POST["numeroPokemon"]) && isset($_POST["nombrePokemon"]) && isset($_POST["descripcionPokemon"]) && isset($_POST["nombreTipoPokemon"])) {

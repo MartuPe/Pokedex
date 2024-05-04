@@ -33,7 +33,7 @@
 </nav>
 <div class="container mt-5">
     <div class="search-container">
-        <div class="search-bar">
+        <div class="search-bar"><br>
             <form class="form-inline" method="post" action="POKEMON/buscarPokemon.php">
                 <input type="text" class="form-control flex-grow-1 mr-2" name="searchInput" placeholder="Ingrese nombre, tipo o número de Pokémon">
                 <button type="submit" class="btn btn-primary" name="buscar">Buscar</button>
