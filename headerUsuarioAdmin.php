@@ -43,8 +43,7 @@
 
 <div class="container container-main">
     <!-- Contenido principal aquí -->
-    <!-- Botón para volver atrás -->
-    <button onclick="history.back()" class="btn btn-primary mt-3">Volver atrás</button>
+
 </div>
 
 
