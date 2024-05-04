@@ -67,3 +67,5 @@ if (!$pokemonEncontrado) {
     }
 }
 ?>
+<button onclick="history.back()" class="btn btn-primary ml-3 mb-3">Volver atrás</button>
+

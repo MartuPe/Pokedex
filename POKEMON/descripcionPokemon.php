@@ -20,4 +20,7 @@ if (isset($_GET["id"])) {
         echo "No se encontró ningún Pokémon con el ID proporcionado.";
     }
 }
+?>
+<button onclick="history.back()" class="btn btn-primary ml-3 mb-3">Volver atrás</button>
+
 

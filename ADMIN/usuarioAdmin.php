@@ -2,10 +2,6 @@
 include_once ("../headerUsuarioAdmin.php")
 ?>
 
-<div>
-    <button onclick="history.back()" class="btn btn-primary mt-3">Volver atrás</button>
-</div>
-
 <div class="container mt-5">
     <div class="search-container">
         <div class="search-bar">
@@ -27,6 +23,7 @@ include_once ("../headerUsuarioAdmin.php")
 <footer class="bottom text-center bg-light p-3">
     <a href="../POKEMON/agregarPokemon.php" class="btn btn-primary">Nuevo Pokémon</a>
 </footer>
+<button onclick="history.back()" class="btn btn-primary ml-3 mb-3">Volver atrás</button>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
