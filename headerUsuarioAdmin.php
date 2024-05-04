@@ -23,7 +23,7 @@
 
         <!-- Título -->
         <div class="title">
-            <h1 class="text-center">POKEDEX</h1>
+           <a href="../index.php"> <h1 class="text-center">POKEDEX</h1> </a>
         </div>
 
         <!-- Formulario de inicio de sesión -->
