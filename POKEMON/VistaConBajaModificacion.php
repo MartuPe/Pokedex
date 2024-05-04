@@ -28,7 +28,7 @@ if (mysqli_num_rows($resultado) > 0) {
         echo "<td style='border: 1px solid #ddd; padding: 8px;'>" . $fila["tipo"] . "</td>";
         // Botones de acción para cada Pokémon
         echo "<td style='border: 1px solid #ddd; padding: 8px;'>";
-        echo "<a href='bajaPokemon.php?id=" . $fila["Id"] . "' class='btn btn-danger' onclick='return confirmarEliminacion(\"" . $fila["nombre"] . "\")'>Baja</a>";
+        echo "<a href='../POKEMON/bajaPokemon.php?id=" . $fila["Id"] . "' class='btn btn-danger' onclick='return confirmarEliminacion(\"" . $fila["nombre"] . "\")'>Baja</a>";
 
         echo "<script>";
         echo "function confirmarEliminacion(nombrePokemon) {";
