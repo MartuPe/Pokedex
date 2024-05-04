@@ -10,7 +10,7 @@ function consultarBD($usuario, $password)
 if (isset($_POST["username"]) && isset($_POST["password"])) {
     $usuario = $_POST["username"];
     $password = $_POST["password"];
-    $esValido = consultarBD($usuario,$password);
+    $esValido = cconsultarBD($usuario,$password);
 
     if ($esValido) {
         $_SESSION["username"] = $usuario;
