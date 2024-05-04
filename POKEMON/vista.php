@@ -6,6 +6,7 @@ $sql = "SELECT * FROM apipokemon";
 $resultado = mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($resultado) > 0){
+
     echo "<table style='border-collapse: collapse; width: 100%;'>";
     echo "<tr style='background-color: #f2f2f2;'>";
     echo "<th style='border: 1px solid #ddd; padding: 8px;'>Imagen pokemon</th>";
@@ -24,6 +25,7 @@ if(mysqli_num_rows($resultado) > 0){
         echo "</tr>";
     }
     echo "</table>";
+
 } else {
     echo "No se encontraron resultados.";
 }

@@ -33,6 +33,7 @@ if (isset($_POST["buscar"])) {
             $pokemonEncontrado = true;
         }
         echo "</table>";
+
     } else {
         echo "<div class='alert alert-warning mt-3' role='alert'>Pokémon no encontrado.</div>";
     }

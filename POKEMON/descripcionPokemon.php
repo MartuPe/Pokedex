@@ -16,6 +16,7 @@ if (isset($_GET["id"])) {
 
         echo "<img src='" . $imagenPokemon . "' width='100' height='100'>";
         echo "<p>" . $fila["descripcion"] . "</p>";
+
     } else {
         echo "No se encontró ningún Pokémon con el ID proporcionado.";
     }

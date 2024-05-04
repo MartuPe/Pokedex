@@ -18,6 +18,7 @@
     <div class="container">
         <!-- Logo e imagen -->
         <a class="navbar-brand" href="#">
+
             <img src="../img/pokemon_PNG85.png" alt="Imagen" class="header-img">
         </a>
 
@@ -35,11 +36,14 @@
             }
             ?>
         </div>
+        <!-- Botón para volver atrás -->
+        <button onclick="history.back()" class="btn btn-primary mt-3">Volver atrás</button>
     </div>
 </nav>
 
 <div class="container container-main">
     <!-- Contenido principal aquí -->
+
 </div>
 
 
