@@ -1,7 +1,5 @@
 <?php
 
-
-
 if(isset($_FILES['imgPokemon']) && isset($_FILES['imgTipo'])){
 
     $numeroPokemon = $_POST['numeroPokemon'];
@@ -20,23 +18,27 @@ if(isset($_FILES['imgPokemon']) && isset($_FILES['imgTipo'])){
     $carpetaArchivo1 = "../img/" . $nombreArchivo1;
     $carpetaArchivo2 = "../img/" . $nombreArchivo2;
 
-    if(move_uploaded_file($nombreArchivo1, $carpetaArchivo1) && move_uploaded_file($nombreArchivo2, $carpetaArchivo2)){
+    // Mover archivos al servidor
+    if(move_uploaded_file($archivoTemporal1, $carpetaArchivo1) && move_uploaded_file($archivoTemporal2, $carpetaArchivo2)){
         include_once("conexionBDD.php");
 
         $sql = "INSERT INTO `apipokemon`(`imagenPokemon`, `imagenTipo`, `numero`, `nombre`, `descripcion`, `tipo`) VALUES ('$carpetaArchivo1','$carpetaArchivo2','$numeroPokemon','$nombrePokemon','$descripcionPokemon','$nombreTipoPokemon')";
+        $resultado = mysqli_query($conn, $sql);
 
-        if(mysqli_query($conn, $sql)){
-            header("Location: ../headerUsuarioAdmin");
+        if($resultado){
+            header("Location: ../ADMIN/usuarioAdmin.php"); // Redirigir al usuario a la página deseada
             exit();
         }
         else{
-            echo "Error al ejecutar el sql" . mysqli_error($conn);
+            echo "Error al ejecutar el SQL: " . mysqli_error($conn);
         }
 
+    } else {
+        echo "Error al mover los archivos al servidor";
     }
-    mysqli_close($conn);
-}else{
-    echo "Error al mover los archivos al servidor";
+
+} else {
+    echo "No se han enviado archivos";
 }
 
 ?>

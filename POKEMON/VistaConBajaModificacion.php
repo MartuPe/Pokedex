@@ -36,7 +36,7 @@ if (mysqli_num_rows($resultado) > 0) {
         echo "}";
         echo "</script>";
 
-        echo "<a href='modificarPokemon.php?id=" . $fila["Id"] . "' class='btn btn-warning ml-2'>Modificar</a>"; // Enlace para modificar
+        echo "<a href='../POKEMON/modificarPokemon.php?id=" . $fila["Id"] . "' class='btn btn-warning ml-2'>Modificar</a>"; // Enlace para modificar
         echo "</td>";
         echo "</tr>";
     }
