@@ -1,6 +1,11 @@
 <?php
 include_once ("../headerUsuarioAdmin.php")
 ?>
+
+<div>
+    <button onclick="history.back()" class="btn btn-primary mt-3">Volver atrás</button>
+</div>
+
 <div class="container mt-5">
     <div class="search-container">
         <div class="search-bar">
