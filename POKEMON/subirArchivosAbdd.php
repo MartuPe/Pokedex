@@ -26,7 +26,7 @@ if(isset($_FILES['imgPokemon']) && isset($_FILES['imgTipo'])){
         $resultado = mysqli_query($conn, $sql);
 
         if($resultado){
-            header("Location: ../ADMIN/usuarioAdmin.php"); // Redirigir al usuario a la página deseada
+            header("Location: ../ADMIN/usuarioAdmin.php");
             exit();
         }
         else{
