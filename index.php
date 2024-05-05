@@ -10,18 +10,18 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-        <!-- Logo e imagen -->
+
         <a class="navbar-brand" href="#">
 
             <img src="img/pokemon_PNG85.png" alt="Imagen" class="header-img">
         </a>
 
-        <!-- Título -->
+
         <div class="title">
             <h1 class="text-center">POKEDEX</h1>
         </div>
 
-        <!-- Formulario de inicio de sesión -->
+
         <div id="loginForm" class="ml-auto">
             <form action="ADMIN/login.php" method="post" class="form-inline">
                 <input type="text" class="form-control mr-2" name="username" placeholder="Usuario" required>
@@ -43,7 +43,7 @@
             <?php
             include_once ("POKEMON/vista.php");
             ?>
-            <!-- Aquí se mostrarán los resultados de la búsqueda -->
+
         </div>
     </div>
 </div>

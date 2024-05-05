@@ -5,14 +5,14 @@ include_once("conexionBDD.php");
 if (isset($_GET["id"])) {
     $pokemonId = $_GET["id"];
 
-    // Obtener los datos del Pokémon seleccionado
+
     $sql = "SELECT * FROM apipokemon WHERE Id = $pokemonId";
     $resultado = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($resultado) > 0) {
         $fila = mysqli_fetch_assoc($resultado);
 
-        // Rellenar el formulario con los datos del Pokémon
+
         $numeroPokemon = $fila["numero"];
         $nombrePokemon = $fila["nombre"];
         $descripcionPokemon = $fila["descripcion"];
@@ -20,7 +20,7 @@ if (isset($_GET["id"])) {
         $imagenPokemon = $fila["imagenPokemon"];
         $imagenTipo = $fila["imagenTipo"];
 
-        // Mostrar el formulario con los datos del Pokémon
+
         ?>
         <div class="container mt-5">
             <div class="row justify-content-center">

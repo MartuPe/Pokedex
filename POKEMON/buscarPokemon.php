@@ -62,7 +62,7 @@ if (!$pokemonEncontrado) {
         }
         echo "</table>";
     } else {
-        // Mostrar mensaje de "No hay Pokémon en la base de datos"
+
         echo "<div class='alert alert-warning mt-3' role='alert'>No hay Pokémon en la base de datos.</div>";
     }
 }

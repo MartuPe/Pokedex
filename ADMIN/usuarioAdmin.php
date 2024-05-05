@@ -15,7 +15,7 @@ include_once ("../headerUsuarioAdmin.php")
             <?php
             include_once("../POKEMON/VistaConBajaModificacion.php");
             ?>
-            <!-- Aquí se mostrarán los resultados de la búsqueda -->
+
         </div>
     </div>
 </div>

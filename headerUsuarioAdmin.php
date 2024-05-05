@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../CSS/style.css">
     <style>
         .container-main {
-            margin-bottom: 200px; /* Ajusta este valor según sea necesario */
+            margin-bottom: 200px;
         }
     </style>
 </head>
@@ -16,17 +16,17 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-        <!-- Logo e imagen -->
+
         <a class="navbar-brand" href="#">
             <img src="../img/pokemon_PNG85.png" alt="Imagen" class="header-img">
         </a>
 
-        <!-- Título -->
+
         <div class="title">
            <a href="../index.php"> <h1 class="text-center">POKEDEX</h1> </a>
         </div>
 
-        <!-- Formulario de inicio de sesión -->
+
         <div id="loginForm" class="ml-auto">
             <?php
             session_start();
@@ -39,7 +39,7 @@
 </nav>
 
 <div class="container container-main">
-    <!-- Contenido principal aquí -->
+
 </div>
 
 

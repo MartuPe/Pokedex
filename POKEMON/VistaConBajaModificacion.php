@@ -26,17 +26,17 @@ if (mysqli_num_rows($resultado) > 0) {
         echo "<td style='border: 1px solid #ddd; padding: 8px;'>" . $fila["numero"] . "</td>";
         echo "<td style='border: 1px solid #ddd; padding: 8px;'>" . $fila["nombre"] . "</td>";
         echo "<td style='border: 1px solid #ddd; padding: 8px;'>" . $fila["tipo"] . "</td>";
-        // Botones de acción para cada Pokémon
+
         echo "<td style='border: 1px solid #ddd; padding: 8px;'>";
         echo "<a href='../POKEMON/bajaPokemon.php?id=" . $fila["Id"] . "' class='btn btn-danger' onclick='return confirmarEliminacion(\"" . $fila["nombre"] . "\")'>Baja</a>";
 
         echo "<script>";
         echo "function confirmarEliminacion(nombrePokemon) {";
-        echo "    return confirm('¿Estás seguro que deseas eliminar a ' + nombrePokemon + '?');"; // Muestra el cartel de confirmación con el nombre del Pokémon
+        echo "    return confirm('¿Estás seguro que deseas eliminar a ' + nombrePokemon + '?');";
         echo "}";
         echo "</script>";
 
-        echo "<a href='../POKEMON/modificarPokemon.php?id=" . $fila["Id"] . "' class='btn btn-warning ml-2'>Modificar</a>"; // Enlace para modificar
+        echo "<a href='../POKEMON/modificarPokemon.php?id=" . $fila["Id"] . "' class='btn btn-warning ml-2'>Modificar</a>";
         echo "</td>";
         echo "</tr>";
     }
