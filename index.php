@@ -1,4 +1,19 @@
-<!DOCTYPE html>
+<?php
+include_once ("Configuracion.php");
+
+
+
+
+$controller = $_GET['controller'] ?? '';
+$action = $_GET['action'] ?? 'get';
+
+$router =configuration::getRouter();
+$router->route($controller,$action);
+?>
+
+
+
+<!--<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -53,7 +68,7 @@
 <script src="script.js"></script>
 </body>
 </html>
-
+-->
 
 
 
