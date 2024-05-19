@@ -1,11 +1,11 @@
 <?php
-$servername = "127.0.0.1";
-$username = "root";
-$pass = "";
-$database = "pokedex";
 
-$conn = mysqli_connect($servername, $username, $pass, $database);
+$config = parse_ini_file("config.ini");
 
-if (!$conn) {
-    die("Error de conexión: " . mysqli_connect_error());
-}
+$servername = $config["servername"];
+$username = $config["username"];
+$pass = $config["pass"];
+$database = $config["database"];
+
+$database = new Database($servername, $username, $pass, $database);
+

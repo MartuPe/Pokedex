@@ -1,5 +1,5 @@
 <?php
-include_once ("../headerUsuarioAdmin.php");
+include_once("../headerUsuarioAdmin.php");
 ?>
 
 <!DOCTYPE html>
