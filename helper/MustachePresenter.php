@@ -1,4 +1,5 @@
 <?php
+
 class MustachePresenter{
     private $mustache;
     private $partialsPathLoader;

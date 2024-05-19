@@ -35,7 +35,6 @@ class Configuration
 
     private static function getPresenter()
     {
-
         return new MustachePresenter("view/template");
     }
     private static function getConfig()
@@ -47,7 +46,5 @@ class Configuration
         $config = self::getConfig();
         return new Database($config["servername"], $config["username"], $config["database"], $config["password"]);
     }
-
-
 
 }
