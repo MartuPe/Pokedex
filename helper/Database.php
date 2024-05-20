@@ -4,7 +4,7 @@ class Database
 {
     private $conn;
 
-    public function __construct($servername, $username, $password, $dbname)
+    public function __construct($servername, $username, $dbname, $password)
     {
         $this->conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -20,7 +20,7 @@ class Database
 
     public function execute($sql)
     {
-        mysqli_query($this->conn, $sql);
+        return mysqli_query($this->conn, $sql);
     }
 
     public function __destruct()
@@ -29,3 +29,6 @@ class Database
     }
 
 }
+
+
+
