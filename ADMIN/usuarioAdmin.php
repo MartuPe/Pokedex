@@ -1,7 +1,3 @@
-<?php
-include_once("../headerUsuarioAdmin.php")
-?>
-
 <div class="container mt-5">
     <div class="search-container">
         <div class="search-bar">

@@ -1,4 +1,5 @@
 <?php
+
 class Router
 {
     private $defaultController;
@@ -10,8 +11,17 @@ class Router
         $this->defaultMethod = $defaultMethod;
     }
 
+
     public function route($controllerName, $methodName)
     {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['buscar'])) {
+            $controllerName = 'pokemon';
+            $methodName = 'buscarPokemon';
+        } else {
+            $controller = $this->getControllerFrom($controllerName);
+            $this->executeMethodFromController($controller, $methodName);
+        }
+
         $controller = $this->getControllerFrom($controllerName);
         $this->executeMethodFromController($controller, $methodName);
     }

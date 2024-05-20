@@ -16,12 +16,14 @@ class PokemonController
     }
 
     public function buscarPokemon(){
-        $id = $_POST['searchInput'];
-        $pokemon = $this->model->buscarPokemon($id);
-        if($pokemon == null){
-            self::get();
-        }else{
-            $this->presenter->render("view/buscarPokemonView.mustache", ["pokemon" => $pokemon]);
+        if (isset($_POST['searchInput'])) {
+            $palabraBuscada = $_POST['searchInput'];
+            $pokemon = $this->model->buscarPokemon($palabraBuscada);
+            if($pokemon == null){
+                $this->get();
+            }else{
+                $this->presenter->render("view/buscarPokemonView.mustache", ["pokemon" => $pokemon]);
+            }
         }
     }
 }

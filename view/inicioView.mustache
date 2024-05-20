@@ -1,27 +1,31 @@
 <div class="search-container">
     <div class="search-bar"><br>
-        <form class="form-inline" method="post" action="/pokemon/buscarPokemon">
-            <input type="text" class="form-control flex-grow-1 mr-2" name="searchInput" placeholder="Ingrese nombre, tipo o número de Pokémon">
+        <form class="form-inline" method="post" action="index.php?controller=Pokemon&method=buscarPokemon">
+            <input type="text" class="form-control flex-grow-1 mr-2" name="searchInput"
+                   placeholder="Ingrese nombre, tipo o número de Pokémon">
             <button type="submit" class="btn btn-primary" name="buscar">Buscar</button>
         </form>
     </div>
-<div>
-    <table style='border-collapse: collapse; width: 100%'>
-        <tr style='background-color: #f2f2f2'>
-            <th style='border: 1px solid #ddd; padding: 8px'>Imagen Pokemon</th>
-            <th style='border: 1px solid #ddd; padding: 8px'>Imagen Tipo</th>
-            <th style='border: 1px solid #ddd; padding: 8px'>Numero</th>
-            <th style='border: 1px solid #ddd; padding: 8px'>Nombre</th>
-            <th style='border: 1px solid #ddd; padding: 8px'>Tipo</th>
-        </tr>
-        {{#pokemons}}
-        <tr style='background-color: #fff'>
-            <td style='border: 1px solid #ddd; padding: 8px'><img src="{{imagenPokemon}}" width="100" height="100"></td>
-            <td style='border: 1px solid #ddd; padding: 8px'><img src="{{imagenTipo}}" width="100" height="100"></td>
-            <td style='border: 1px solid #ddd; padding: 8px'>{{numero}}</td>
-            <td style='border: 1px solid #ddd; padding: 8px'>{{nombre}}</td>
-            <td style='border: 1px solid #ddd; padding: 8px'>{{tipo}}</td>
-        </tr>
-        {{/pokemons}}
-    </table>
+    <div>
+        <table style='border-collapse: collapse; width: 100%'>
+            <tr style='background-color: #f2f2f2'>
+                <th style='border: 1px solid #ddd; padding: 8px'>Imagen Pokemon</th>
+                <th style='border: 1px solid #ddd; padding: 8px'>Imagen Tipo</th>
+                <th style='border: 1px solid #ddd; padding: 8px'>Numero</th>
+                <th style='border: 1px solid #ddd; padding: 8px'>Nombre</th>
+                <th style='border: 1px solid #ddd; padding: 8px'>Tipo</th>
+            </tr>
+            {{#pokemons}}
+                <tr style='background-color: #fff'>
+                    <td style='border: 1px solid #ddd; padding: 8px'><img src="{{imagenPokemon}}" width="100"
+                                                                          height="100"></td>
+                    <td style='border: 1px solid #ddd; padding: 8px'><img src="{{imagenTipo}}" width="100" height="100">
+                    </td>
+                    <td style='border: 1px solid #ddd; padding: 8px'>{{numero}}</td>
+                    <td style='border: 1px solid #ddd; padding: 8px'>{{nombre}}</td>
+                    <td style='border: 1px solid #ddd; padding: 8px'>{{tipo}}</td>
+                </tr>
+            {{/pokemons}}
+        </table>
+    </div>
 </div>

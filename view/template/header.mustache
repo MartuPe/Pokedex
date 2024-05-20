@@ -2,7 +2,6 @@
     <div class="container">
 
         <a class="navbar-brand" href="#">
-
             <img src="img/pokemon_PNG85.png" width="100" height="100" alt="Imagen" class="header-img">
         </a>
 
@@ -13,7 +12,7 @@
 
 
         <div id="loginForm" class="ml-auto">
-            <form action="ADMIN/login.php" method="post" class="form-inline">
+            <form action="index.php?controller=Usuario&method=login" method="post" class="form-inline">
                 <input type="text" class="form-control mr-2" name="username" placeholder="Usuario" required>
                 <input type="password" class="form-control mr-2" name="password" placeholder="Contraseña" required>
                 <button type="submit" class="btn btn-primary">Ingresar</button>

@@ -11,7 +11,10 @@ class PokemonModel {
         return $this->database->query("SELECT * FROM `apipokemon`");
     }
 
-    public function buscarPokemon($id){
-        return $this->database->query("SELECT * FROM `apipokemon` WHERE `id` = '$id'");
+    public function buscarPokemon($palabraBuscada = ""){
+        $sql = "SELECT * FROM apipokemon WHERE tipo = '$palabraBuscada'  OR 
+                nombre = '$palabraBuscada' OR numero = '$palabraBuscada'";
+
+        return $this->database->query($sql);
     }
 }
